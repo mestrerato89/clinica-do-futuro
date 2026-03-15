@@ -26,6 +26,8 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 ::selection {
@@ -39,6 +41,8 @@ body {
     font-family: var(--font-body);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -1217,7 +1221,10 @@ section {
     
     .navbar { height: 75px; }
     .logo { font-size: 1.1rem; }
-    .btn-navbar { display: none; } /* Hide fixed nav button on mobile to save space */
+    .nav-links { display: none !important; }
+    .btn-navbar { display: none; }
+    
+    .navbar .container { justify-content: center; }
     
     .hero { padding: 120px 0 80px; }
     .hero .container {
@@ -1258,7 +1265,8 @@ section {
     .case-value { font-size: 2.8rem; }
     
     .logo-carousel, .stats-ticker {
-        width: 100%;
+        width: 100vw;
+        max-width: 100%;
         overflow: hidden;
         margin-left: 0;
         margin-right: 0;
@@ -1270,8 +1278,8 @@ section {
 }
 
 @media (max-width: 480px) {
-    h1 { font-size: 2.2rem; }
-    h2 { font-size: 1.8rem; }
+    h1 { font-size: 1.8rem; line-height: 1.1; }
+    h2 { font-size: 1.6rem; }
     section { padding: 60px 0; }
     .btn-primary { width: 100%; padding: 1.4rem 2rem; font-size: 1rem; }
     
