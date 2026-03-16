@@ -1477,7 +1477,7 @@ section {
     .testimonials-grid {
         display: flex !important;
         flex-direction: row !important;
-        overflow-x: hidden !important; /* DISABLE MANUAL SWIPE */
+        overflow-x: auto !important; /* RE-ENABLE SWIPE FOR INTUITIVE USE */
         overflow-y: hidden !important;
         scroll-snap-type: x mandatory !important;
         scroll-behavior: smooth !important;
@@ -1485,21 +1485,25 @@ section {
         padding: 0 !important;
         scrollbar-width: none;
         -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch !important;
+        touch-action: pan-y !important; /* CRITICAL: ALLOW VERTICAL PAGE SCROLLING */
     }
     .testimonials-grid::-webkit-scrollbar { display: none; }
 
     .testimonial-video {
         scroll-snap-align: center !important;
-        flex: 0 0 100% !important;
-        width: 100% !important;
-        max-width: 300px !important;
-        margin: 0 auto !important;
+        flex: 0 0 calc(100% - 40px) !important; /* SHOW PEAK OF NEXT SLIDE */
+        width: calc(100% - 40px) !important;
+        max-width: 320px !important;
+        margin: 0 20px !important;
     }
 
     .reel-container {
         position: relative !important;
         display: block !important;
         width: 100% !important;
+        max-width: 100vw !important; /* PREVENT OVERFLOW */
+        overflow: hidden !important;
     }
 
     .reel-nav {

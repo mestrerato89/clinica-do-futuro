@@ -62,11 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (nextBtn && prevBtn && reel) {
         nextBtn.addEventListener('click', () => {
-            const scrollAmount = reel.clientWidth; // Exactly one full view (one video on mobile)
+            const firstItem = reel.querySelector('.testimonial-video');
+            const scrollAmount = firstItem ? firstItem.offsetWidth + 40 : reel.clientWidth; 
             reel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         });
         prevBtn.addEventListener('click', () => {
-            const scrollAmount = reel.clientWidth;
+            const firstItem = reel.querySelector('.testimonial-video');
+            const scrollAmount = firstItem ? firstItem.offsetWidth + 40 : reel.clientWidth;
             reel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         });
     }
