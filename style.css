@@ -1477,15 +1477,14 @@ section {
     .testimonials-grid {
         display: flex !important;
         flex-direction: row !important;
-        overflow-x: auto !important;
-        overflow-y: hidden !important; /* LOCK VERTICAL */
+        overflow-x: hidden !important; /* DISABLE MANUAL SWIPE */
+        overflow-y: hidden !important;
         scroll-snap-type: x mandatory !important;
-        touch-action: pan-y !important; /* ALLOW VERTICAL PAGE SCROLL */
+        scroll-behavior: smooth !important;
         gap: 0 !important;
         padding: 0 !important;
         scrollbar-width: none;
         -ms-overflow-style: none;
-        -webkit-overflow-scrolling: touch;
     }
     .testimonials-grid::-webkit-scrollbar { display: none; }
 
@@ -1498,7 +1497,29 @@ section {
     }
 
     .reel-nav {
-        display: none !important;
+        display: flex !important;
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        width: 100% !important;
+        justify-content: space-between !important;
+        padding: 0 5px !important;
+        pointer-events: none !important;
+        z-index: 100 !important;
+    }
+
+    .reel-nav button {
+        pointer-events: auto !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        color: #000 !important;
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 50% !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+        font-size: 1.2rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     .trust-bar { display: none !important; } /* REMOVE SQUARES */

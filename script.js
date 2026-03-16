@@ -62,10 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (nextBtn && prevBtn && reel) {
         nextBtn.addEventListener('click', () => {
-            reel.scrollBy({ left: 300, behavior: 'smooth' });
+            const scrollAmount = reel.clientWidth; // Exactly one full view (one video on mobile)
+            reel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         });
         prevBtn.addEventListener('click', () => {
-            reel.scrollBy({ left: -300, behavior: 'smooth' });
+            const scrollAmount = reel.clientWidth;
+            reel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         });
     }
 });
