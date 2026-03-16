@@ -1462,6 +1462,14 @@ section {
         right: auto !important;
     }
 
+    .ticker-track {
+        animation-duration: 20s !important; /* FASTER: 40s -> 20s */
+    }
+
+    .logo-track {
+        animation-duration: 25s !important; /* FASTER: 45s -> 25s */
+    }
+
     /* TESTIMONIALS MOBILE FIX - INTERACTIVE CAROUSEL */
     .testimonials-grid {
         display: flex !important;
