@@ -1480,7 +1480,7 @@ section {
         overflow-x: auto !important;
         overflow-y: hidden !important; /* LOCK VERTICAL */
         scroll-snap-type: x mandatory !important;
-        touch-action: pan-x !important; /* FORCE HORIZONTAL FEEDBACK */
+        touch-action: pan-y !important; /* ALLOW VERTICAL PAGE SCROLL */
         gap: 0 !important;
         padding: 0 !important;
         scrollbar-width: none;
