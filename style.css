@@ -1314,9 +1314,12 @@ section {
     .nav-links { display: none !important; }
     .btn-navbar { 
         display: flex !important; 
-        padding: 0.6rem 0.8rem !important;
-        font-size: 0.75rem !important;
-        border-radius: 8px !important;
+        padding: 0.5rem 0.8rem !important; /* Slightly more compact */
+        font-size: 0.65rem !important; /* Smaller font to fit single line */
+        border-radius: 6px !important;
+        white-space: nowrap !important; /* Force single line */
+        line-height: 1.2 !important;
+        box-shadow: 0 3px 0 #0E6B5D !important; /* Reduced shadow for scale */
     }
     
     .navbar .container { 
