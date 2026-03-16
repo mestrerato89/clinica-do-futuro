@@ -1297,12 +1297,36 @@ section {
 @media (max-width: 992px) {
     .container { padding: 0 1.5rem; }
     
-    .navbar { height: 60px; background: rgba(255, 255, 255, 0.9); }
-    .navbar .logo { display: none; } /* Hide navbar logo on mobile as it's in the hero */
+    .navbar { 
+        height: 70px; 
+        background: rgba(255, 255, 255, 0.98); 
+        padding: 0 10px;
+        position: fixed;
+        top: 0;
+        z-index: 2000;
+        display: flex;
+        align-items: center;
+    }
+    .navbar .logo { 
+        display: flex !important; 
+        font-size: 0.9rem;
+    }
     .nav-links { display: none !important; }
-    .btn-navbar { display: none !important; }
+    .btn-navbar { 
+        display: flex !important; 
+        padding: 0.6rem 0.8rem !important;
+        font-size: 0.75rem !important;
+        border-radius: 8px !important;
+    }
     
-    .navbar .container { justify-content: center; }
+    .navbar .container { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .hero-logo-mobile { display: none !important; }
     
     .hero { padding: 40px 0 60px; overflow: visible; background: #F8F9FA; }
     .hero .container {
@@ -1475,7 +1499,7 @@ section {
     .trust-bar { gap: 1rem; margin-top: 1.5rem; }
     .trust-logo { height: 18px; filter: grayscale(1); opacity: 0.4; mix-blend-mode: multiply; }
     
-    .floating-card.c1 { top: 40%; left: -150px; }
-    .floating-card.c2 { top: -8%; right: -140px; }
-    .floating-card.c3 { top: 60%; right: -160px; }
+    .floating-card.c1 { top: 40%; left: -40px; }
+    .floating-card.c2 { top: -8%; right: -30px; }
+    .floating-card.c3 { top: 60%; right: -50px; }
 }
